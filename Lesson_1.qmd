@@ -1,0 +1,80 @@
+---
+title: "Lesson-1"
+subtitle: "Introduction to Quarto document"
+author: "Dr. Nu Nu Khaing"
+abstract: "This is my first quarto document.TThis is my first quarto document.his is my first quarto document.This is my first quarto document."
+format: 
+  html: 
+    theme: sky
+bibliography: references.bib
+csl: apa.csl
+code-fold: true
+editor: visual
+---
+
+## Introduction: Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org> [@than2020].
+
+## Historical Background
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+### Histogram
+
+```{r}
+hist(rnorm(1000),col=rainbow(7))
+```
+
+### Scatter Plot
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+plot(1:20, col=rainbow(20),type="b",cex=3, pch=15)
+```
+
+The `echo: false` option disables the printing of code (only output is displayed)[@myint2020].
+
+### Videos
+
+{{< video https://www.youtube.com/watch?v=owVKcvdyNtQ >}}
+
+### Tabset
+
+::: panel-tabset
+## Elephants
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+## Table1:
+
+```{r}
+knitr::kable(head(ggplot2::diamonds))
+```
+
+## Figure1
+
+![](dygraph-1.png){width="500"}
+:::
+
+### Image
+
+![CatGPT](Robot_cat.gif){width="300"}
+
+### Callout
+
+::: callout-note
+အားလုံး အဆင်ပြေရဲ့လား။ သေချာကြည့်ပြီး လိုက်လုပ်ကြည့်နော်။🥰
+:::
+
+### Div
+
+::: {#Column-Page}
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this.
+
+![](We_can_do_it.png){width="300"}
+:::
+
+### References
